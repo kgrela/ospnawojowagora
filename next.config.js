@@ -12,8 +12,11 @@ const withMDX = mdx({
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: process.env.BASE_PUBLIC_PATH ?? undefined,
+  basePath: process.env.NEXT_PUBLIC_PATH,
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
+  publicRuntimeConfig: {
+    basePath: process.env.NEXT_PUBLIC_PATH,
+  },
 };
 
 module.exports = withMDX(nextConfig);

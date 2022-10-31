@@ -25,9 +25,9 @@ jobs:
           npm run test-ci
 
       - name: Build
-        run: BASE_PUBLIC_PATH=$BASE_PUBLIC_PATH npm run build
+        run: NEXT_PUBLIC_PATH=$NEXT_PUBLIC_PATH npm run build
         env:
-          BASE_PUBLIC_PATH: ${{ format('/{0}',  github.event.repository.name) }}
+          NEXT_PUBLIC_PATH: ${{ format('/{0}',  github.event.repository.name) }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

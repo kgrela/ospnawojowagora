@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav>
       <div className="container flex justify-between items-center">
         <Link href="/">
-          <img src="/logo.png" alt="OSP Nawojowa Góra" className="w-10 h-10" />
+          <img src="logo.png" alt="OSP Nawojowa Góra" className="w-10 h-10" />
         </Link>
 
         <div className="flex items-center gap-6">
