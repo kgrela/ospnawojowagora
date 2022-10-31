@@ -2,6 +2,10 @@
 
 Official website of OSP Nawojowa Góra.
 
+## Demo
+
+- [Github Pages](https://kgrela.github.io/ospnawojowagora/)
+
 ## Links
 
 - [Figma project](https://www.figma.com/file/qBmcMdLap5s8Zq4NVCjTTq/OSP-NAWOJOWA-G%C3%93RA---WWW)
