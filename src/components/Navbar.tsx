@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -6,12 +5,7 @@ const Navbar = () => {
     <nav>
       <div className="container flex justify-between items-center">
         <Link href="/">
-          <Image
-            src="/logo.png"
-            alt="OSP Nawojowa Góra"
-            width={48}
-            height={48}
-          />
+          <img src="/logo.png" alt="OSP Nawojowa Góra" className="w-10 h-10" />
         </Link>
 
         <div className="flex items-center gap-6">
