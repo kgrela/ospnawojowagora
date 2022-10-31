@@ -12,7 +12,7 @@ const withMDX = mdx({
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: process.env.BASE_PUBLIC_PATH ?? '/',
+  basePath: process.env.BASE_PUBLIC_PATH ?? undefined,
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
 };
 
