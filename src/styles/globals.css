@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply antialiased;
+  }
+
+  html {
+    @apply md:text-lg;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto w-full max-w-screen-xl p-6 lg:p-12 relative;
+  }
+}
