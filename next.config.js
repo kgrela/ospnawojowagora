@@ -9,14 +9,15 @@ const withMDX = mdx({
 });
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const config = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: process.env.NEXT_PUBLIC_PATH,
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
-  publicRuntimeConfig: {
-    basePath: process.env.NEXT_PUBLIC_PATH,
-  },
 };
 
-module.exports = withMDX(nextConfig);
+if (process.env.NODE_ENV === 'production') {
+  config.basePath = process.env.NEXT_PUBLIC_PATH;
+  config.publicRuntimeConfig.basePath = process.env.NEXT_PUBLIC_PATH;
+}
+
+module.exports = withMDX(config);

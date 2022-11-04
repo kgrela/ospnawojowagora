@@ -6,19 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.red,
+        primary: '#DF0000',
+      },
+      fontFamily: {
+        sans: ['Oxanium'],
       },
     },
   },
-  // plugins: [require('daisyui')],
-  // daisyui: {
-  //   styled: true,
-  //   themes: true,
-  //   base: true,
-  //   utils: true,
-  //   logs: true,
-  //   rtl: false,
-  //   prefix: '',
-  //   darkTheme: 'light',
-  // },
+  plugins: [require('@tailwindcss/typography'), require('@headlessui/tailwindcss')({ prefix: 'ui' })],
 };

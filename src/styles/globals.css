@@ -9,12 +9,12 @@
   }
 
   html {
-    @apply md:text-lg;
+    @apply text-lg;
   }
 }
 
 @layer components {
   .container {
-    @apply mx-auto w-full max-w-screen-xl p-6 lg:p-12 relative;
+    @apply mx-auto w-full max-w-screen-lg py-3 lg:py-6 px-4 lg:px-8 relative;
   }
 }
