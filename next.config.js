@@ -15,7 +15,7 @@ const config = {
   reactStrictMode: true,
   swcMinify: true,
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
-  assetPrefix: isProd ? `${process.env.NEXT_PUBLIC_PATH}` : undefined,
+  assetPrefix: isProd ? process.env.NEXT_PUBLIC_PATH : undefined,
   images: {
     unoptimized: true,
   },
