@@ -16,7 +16,7 @@ const config = {
   swcMinify: true,
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
   assetPrefix: isProd ? process.env.NEXT_PUBLIC_PATH : undefined,
-  basePath: isProd ? process.env.NEXT_PUBLIC_PATH : undefined,
+  basePath: isProd ? process.env.NEXT_BASE_PATH : undefined,
   images: {
     unoptimized: true,
   },
