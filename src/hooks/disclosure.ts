@@ -8,7 +8,7 @@ function useDisclosure() {
   const onClose = useCallback(() => setIsOpen(false), []);
 
   useEffect(() => {
-    const classNames = 'overflow-hidden';
+    const classNames = '!overflow-hidden';
 
     if (isOpen) {
       document.documentElement.classList.add(classNames);

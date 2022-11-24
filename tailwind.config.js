@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         primary: '#DF0000',
+        white: '#FFFAF7',
       },
       fontFamily: {
         sans: ['Oxanium'],
