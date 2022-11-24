@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: NEXT_PUBLIC_PATH=$NEXT_PUBLIC_PATH npm run build
         env:
-          NEXT_PUBLIC_PATH: ${{ format('/{0}/',  github.event.repository.name) }}
+          NEXT_PUBLIC_PATH: ${{ format('/{0}',  github.event.repository.name) }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
