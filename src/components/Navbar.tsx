@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   IconBrandFacebook,
   IconBrandYoutube,
@@ -9,7 +10,7 @@ import {
   IconChevronUp,
   IconChevronRight,
 } from '@tabler/icons';
-import { Disclosure, Menu, Transition, Popover } from '@headlessui/react';
+import { Transition, Popover } from '@headlessui/react';
 import { Fragment } from 'react';
 import { v4 } from 'uuid';
 import classNames from 'classnames';
@@ -96,7 +97,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-6 w-max">
-            <img src="/logo.png" alt="OSP Nawojowa Góra" className="w-6 h-7" />
+            <Image width={24} height={28} src="/logo.png" alt="OSP Nawojowa Góra" className="w-6 h-7" />
             <h1 className="hidden lg:block font-semibold text-xl">OSP Nawojowa Góra</h1>
           </Link>
 

@@ -1,8 +1,12 @@
-import { useCallback, useLayoutEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
+
+import { useBrowserLayoutEffect } from './browserLayoutEffect';
+
+const isClient = typeof window !== 'undefined';
 
 function useScrollPosition() {
   const [scrollPosition, setScrollPosition] = useState(() => {
-    if (typeof window !== 'undefined') {
+    if (isClient) {
       return document.documentElement.scrollTop ?? 0;
     }
 
@@ -14,7 +18,7 @@ function useScrollPosition() {
     setScrollPosition(position);
   }, []);
 
-  useLayoutEffect(() => {
+  useBrowserLayoutEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
