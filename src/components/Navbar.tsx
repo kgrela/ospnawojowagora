@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import {
   IconBrandFacebook,
   IconBrandYoutube,
@@ -13,11 +12,11 @@ import {
 import { Transition, Popover } from '@headlessui/react';
 import { Fragment } from 'react';
 import { v4 } from 'uuid';
-import classNames from 'classnames';
 
 import { useDisclosure } from 'hooks/disclosure';
 import { useRouterEvent } from 'hooks/routerEvent';
 import { useScrollPosition } from 'hooks/scrollPosition';
+import { getAssetUrl } from 'lib/assetUrl';
 
 export const NAVBAR_LINKS = [
   {
@@ -93,11 +92,11 @@ const Navbar = () => {
   useRouterEvent('routeChangeComplete', onClose);
 
   return (
-    <header className={classNames('sticky top-0 z-50 bg-white', position > 0 && 'shadow-lg')}>
+    <header className="sticky top-0 z-50 bg-white">
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-6 w-max">
-            <Image width={24} height={28} src="/logo.png" alt="OSP Nawojowa Góra" className="w-6 h-7" />
+            <img src={getAssetUrl('/logo.png')} alt="OSP Nawojowa Góra" className="w-6 h-7" />
             <h1 className="hidden lg:block font-semibold text-xl">OSP Nawojowa Góra</h1>
           </Link>
 
