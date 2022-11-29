@@ -25,7 +25,9 @@ jobs:
           npm run test-ci
 
       - name: Build
-        run: NEXT_PUBLIC_PATH=$NEXT_PUBLIC_PATH NEXT_BASE_PATH=$NEXT_BASE_PATH npm run build
+        run: |
+          NEXT_PUBLIC_PATH=$NEXT_PUBLIC_PATH NEXT_BASE_PATH=$NEXT_BASE_PATH npm run build
+          touch ./out/.nojekyll
         env:
           NEXT_PUBLIC_PATH: ${{ format('/{0}/',  github.event.repository.name) }}
           NEXT_BASE_PATH: ${{ format('/{0}',  github.event.repository.name) }}
