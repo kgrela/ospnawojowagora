@@ -16,7 +16,7 @@ import { v4 } from 'uuid';
 import { useDisclosure } from 'hooks/disclosure';
 import { useRouterEvent } from 'hooks/routerEvent';
 import { useScrollPosition } from 'hooks/scrollPosition';
-import { getAssetUrl } from 'lib/assetUrl';
+import LogoImage from 'assets/images/logo.png';
 
 export const NAVBAR_LINKS = [
   {
@@ -96,7 +96,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-6 w-max">
-            <img src={getAssetUrl('/logo.png')} alt="OSP Nawojowa Góra" className="w-6 h-7" />
+            <img src={LogoImage.src} alt="OSP Nawojowa Góra" className="w-6 h-7" />
             <h1 className="hidden lg:block font-semibold text-xl">OSP Nawojowa Góra</h1>
           </Link>
 
