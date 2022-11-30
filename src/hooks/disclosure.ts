@@ -1,6 +1,6 @@
 import { useCallback, useState, useEffect } from 'react';
 
-function useDisclosure() {
+function useDisclosure(skipClassListToggle?: boolean) {
   const [isOpen, setIsOpen] = useState(false);
 
   const onToggle = useCallback(() => setIsOpen((p) => !p), []);
@@ -8,6 +8,10 @@ function useDisclosure() {
   const onClose = useCallback(() => setIsOpen(false), []);
 
   useEffect(() => {
+    if (skipClassListToggle) {
+      return;
+    }
+
     const classNames = '!overflow-hidden';
 
     if (isOpen) {
@@ -15,7 +19,7 @@ function useDisclosure() {
     } else {
       document.documentElement.classList.remove(classNames);
     }
-  }, [isOpen]);
+  }, [skipClassListToggle, isOpen]);
 
   return {
     isOpen,

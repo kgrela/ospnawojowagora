@@ -1,5 +1,5 @@
-import { getDateDifference } from 'lib/date';
 import HeroImage from 'assets/images/hero.png';
+import { getDateDifference } from 'lib/date';
 
 const Hero = () => {
   return (
