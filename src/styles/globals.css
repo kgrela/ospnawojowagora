@@ -19,6 +19,6 @@
 
 @layer components {
   .container {
-    @apply mx-auto w-full max-w-screen-xl p-6 relative;
+    @apply mx-auto w-full max-w-screen-xl p-4 relative;
   }
 }
