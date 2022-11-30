@@ -93,41 +93,29 @@ const Navbar = () => {
                 <IconChevronDown className="transform group-focus-within:rotate-180 transition-transform" />
               </button>
               <div className="relative w-full invisible flex-col flex overflow-hidden bg-white transition-all max-h-0 group-focus-within:visible group-focus-within:max-h-96">
-                <Link
-                  className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300 last:border-none"
-                  href="/historia"
-                >
-                 <IconChevronsUpRight /> Historia 
+                <Link className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300" href="/historia">
+                  <IconChevronsUpRight /> Historia
+                </Link>
+                <Link className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300" href="/czlonkowie">
+                  <IconChevronsUpRight /> Członkowie
                 </Link>
                 <Link
-                  className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300 last:border-none"
-                  href="/czlonkowie"
-                >
-                 <IconChevronsUpRight /> Członkowie 
-                </Link>
-                <Link
-                  className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300 last:border-none"
+                  className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300"
                   href="/mlodziezowa-druzyna-pozarnicza"
                 >
-                 <IconChevronsUpRight /> Młodzieżowa Drużyna Pożarnicza 
+                  <IconChevronsUpRight /> Młodzieżowa Drużyna Pożarnicza
+                </Link>
+                <Link className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300" href="/zarzad">
+                  <IconChevronsUpRight /> Zarząd
                 </Link>
                 <Link
-                  className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300 last:border-none"
-                  href="/zarzad"
-                >
-                 <IconChevronsUpRight /> Zarząd 
-                </Link>
-                <Link
-                  className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300 last:border-none"
+                  className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300"
                   href="/wyposazenie"
                 >
-                 <IconChevronsUpRight /> Wyposażenie 
+                  <IconChevronsUpRight /> Wyposażenie
                 </Link>
-                <Link
-                  className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300 last:border-none"
-                  href="/sztandar"
-                >
-                 <IconChevronsUpRight /> Sztandar 
+                <Link className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300" href="/sztandar">
+                  <IconChevronsUpRight /> Sztandar
                 </Link>
               </div>
             </div>
