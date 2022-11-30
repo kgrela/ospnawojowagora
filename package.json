@@ -7,8 +7,8 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watchAll=false --maxWorkers=50%",
-    "test-ci": "jest --ci --watchAll=false --maxWorkers=50%"
+    "test": "jest --watchAll=false --maxWorkers=50% --passWithNoTests",
+    "test-ci": "jest --ci --watchAll=false --maxWorkers=50% --passWithNoTests"
   },
   "devDependencies": {
     "@headlessui/react": "^1.7.3",
