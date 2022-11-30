@@ -67,6 +67,7 @@ const Navbar = () => {
         </div>
 
         <button className="relative z-50 lg:hidden" onClick={onToggle}>
+          <span className="hidden sr-only">Otwórz/zamknij nawigację</span>
           <span className="block w-6 h-6">{isOpen ? <IconX /> : <IconMenu2 />}</span>
         </button>
 
