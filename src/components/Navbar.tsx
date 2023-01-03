@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { IconMenu2, IconX, IconChevronDown, IconChevronsUpRight } from '@tabler/icons';
-import { Transition, Popover, Disclosure, Menu } from '@headlessui/react';
+import { Transition, Disclosure } from '@headlessui/react';
 import { Fragment } from 'react';
 import { v4 } from 'uuid';
 
@@ -8,6 +8,7 @@ import LogoImage from 'assets/images/logo.png';
 import { SOCIALS_ITEMS } from 'common/constants';
 import { useDisclosure } from 'hooks/disclosure';
 import { useRouterEvent } from 'hooks/routerEvent';
+import ResizablePanel from './ResizablePanel';
 
 const Navbar = () => {
   const { isOpen, onToggle, onClose } = useDisclosure();
@@ -88,38 +89,55 @@ const Navbar = () => {
             <Link className="py-2 border-b-[1px] border-b-zinc-300 last:border-none" href="/blog">
               Aktualności
             </Link>
-            <div className="relative flex flex-col group">
-              <button className="w-full overflow-hidden py-2 border-b-[1px] border-b-zinc-300 flex justify-between items-center gap-2">
-                <span>Jednostka</span>
-                <IconChevronDown className="transform group-focus-within:rotate-180 transition-transform" />
-              </button>
-              <div className="relative w-full invisible flex-col flex overflow-hidden bg-white transition-all max-h-0 group-focus-within:visible group-focus-within:max-h-96">
-                <Link className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300" href="/historia">
-                  <IconChevronsUpRight /> Historia
-                </Link>
-                <Link className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300" href="/czlonkowie">
-                  <IconChevronsUpRight /> Członkowie
-                </Link>
-                <Link
-                  className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300"
-                  href="/mlodziezowa-druzyna-pozarnicza"
-                >
-                  <IconChevronsUpRight /> Młodzieżowa Drużyna Pożarnicza
-                </Link>
-                <Link className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300" href="/zarzad">
-                  <IconChevronsUpRight /> Zarząd
-                </Link>
-                <Link
-                  className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300"
-                  href="/wyposazenie"
-                >
-                  <IconChevronsUpRight /> Wyposażenie
-                </Link>
-                <Link className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300" href="/sztandar">
-                  <IconChevronsUpRight /> Sztandar
-                </Link>
-              </div>
-            </div>
+            <Disclosure as="div" className="relative flex flex-col group">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="w-full overflow-hidden py-2 border-b-[1px] border-b-zinc-300 flex justify-between items-center gap-2">
+                    <span>Jednostka</span>
+                    <IconChevronDown className="transform transition-transform" />
+                  </Disclosure.Button>
+                  <ResizablePanel
+                    open={open}
+                    className="relative w-full flex-col flex bg-white duration-150"
+                    wrapperClassName="duration-75"
+                  >
+                    <Link
+                      className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300"
+                      href="/historia"
+                    >
+                      <IconChevronsUpRight /> Historia
+                    </Link>
+                    <Link
+                      className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300"
+                      href="/czlonkowie"
+                    >
+                      <IconChevronsUpRight /> Członkowie
+                    </Link>
+                    <Link
+                      className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300"
+                      href="/mlodziezowa-druzyna-pozarnicza"
+                    >
+                      <IconChevronsUpRight /> Młodzieżowa Drużyna Pożarnicza
+                    </Link>
+                    <Link className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300" href="/zarzad">
+                      <IconChevronsUpRight /> Zarząd
+                    </Link>
+                    <Link
+                      className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300"
+                      href="/wyposazenie"
+                    >
+                      <IconChevronsUpRight /> Wyposażenie
+                    </Link>
+                    <Link
+                      className="flex gap-2 items-center py-2 pl-2 border-b-[1px] border-b-zinc-300"
+                      href="/sztandar"
+                    >
+                      <IconChevronsUpRight /> Sztandar
+                    </Link>
+                  </ResizablePanel>
+                </>
+              )}
+            </Disclosure>
             <Link className="py-2 border-b-[1px] border-b-zinc-300 last:border-none" href="/biblioteka">
               Biblioteka
             </Link>
