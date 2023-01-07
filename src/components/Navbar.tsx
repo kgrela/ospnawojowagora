@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="absolute inset-0 bg-white bg-opacity-80 backdrop-blur"></div>
+      <div className="absolute inset-0 bg-white bg-opacity-90 backdrop-blur"></div>
       <div className="container flex items-center justify-between h-16 border-b-[1px]">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-6 w-max">
@@ -34,37 +34,50 @@ const Navbar = () => {
             ))}
           </div>
         </div>
-        <div className="hidden lg:flex items-center gap-4 font-medium">
-          <Link href="/">Strona główna</Link>
-          <Link href="/blog">Aktualności</Link>
+        <div className="hidden lg:flex items-center gap-2 font-medium">
+          <Link className="lg:focus-visible:bg-neutral-200 lg:hover:bg-neutral-200 p-2 rounded" href="/">
+            Strona główna
+          </Link>
+          <Link className="lg:focus-visible:bg-neutral-200 lg:hover:bg-neutral-200 p-2 rounded" href="/blog">
+            Aktualności
+          </Link>
           <div className="relative flex flex-col group">
-            <button className="w-full flex justify-between items-center gap-2">
+            <button className="w-full flex justify-between items-center gap-2 lg:focus-visible:bg-neutral-200 lg:hover:bg-neutral-200 p-2 rounded">
               <span>Jednostka</span>
               <IconChevronDown className="transform group-focus-within:rotate-180 group-hover:rotate-180 transition-transform" />
             </button>
-            <div className="absolute top-full -left-4 mt-4 border-[1px] rounded w-max flex invisible opacity-0 flex-col overflow-hidden bg-white p-2 transition-all translate-y-5 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0">
-              <Link className="p-2 focus-visible:bg-zinc-100 hover:bg-zinc-100" href="/historia">
-                Historia
-              </Link>
-              <Link className="p-2 focus-visible:bg-zinc-100 hover:bg-zinc-100" href="/czlonkowie">
-                Członkowie
-              </Link>
-              <Link className="p-2 focus-visible:bg-zinc-100 hover:bg-zinc-100" href="/mlodziezowa-druzyna-pozarnicza">
-                Młodzieżowa Drużyna Pożarnicza
-              </Link>
-              <Link className="p-2 focus-visible:bg-zinc-100 hover:bg-zinc-100" href="/zarzad">
-                Zarząd
-              </Link>
-              <Link className="p-2 focus-visible:bg-zinc-100 hover:bg-zinc-100" href="/wyposazenie">
-                Wyposażenie
-              </Link>
-              <Link className="p-2 focus-visible:bg-zinc-100 hover:bg-zinc-100" href="/sztandar">
-                Sztandar
-              </Link>
+            <div className="absolute top-full -left-4 mt-0 pt-2 invisible opacity-0  transition-all translate-y-5 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0">
+              <div className="border-[1px] rounded w-max flex flex-col overflow-hidden bg-white p-2">
+                <Link className="p-2 lg:focus-visible:bg-neutral-200 lg:hover:bg-neutral-200" href="/historia">
+                  Historia
+                </Link>
+                <Link className="p-2 lg:focus-visible:bg-neutral-200 lg:hover:bg-neutral-200" href="/czlonkowie">
+                  Członkowie
+                </Link>
+                <Link
+                  className="p-2 lg:focus-visible:bg-neutral-200 lg:hover:bg-neutral-200"
+                  href="/mlodziezowa-druzyna-pozarnicza"
+                >
+                  Młodzieżowa Drużyna Pożarnicza
+                </Link>
+                <Link className="p-2 lg:focus-visible:bg-neutral-200 lg:hover:bg-neutral-200" href="/zarzad">
+                  Zarząd
+                </Link>
+                <Link className="p-2 lg:focus-visible:bg-neutral-200 lg:hover:bg-neutral-200" href="/wyposazenie">
+                  Wyposażenie
+                </Link>
+                <Link className="p-2 lg:focus-visible:bg-neutral-200 lg:hover:bg-neutral-200" href="/sztandar">
+                  Sztandar
+                </Link>
+              </div>
             </div>
           </div>
-          <Link href="/biblioteka">Biblioteka</Link>
-          <Link href="/kontakt">Kontakt</Link>
+          <Link className="lg:focus-visible:bg-neutral-200 lg:hover:bg-neutral-200 p-2 rounded" href="/biblioteka">
+            Biblioteka
+          </Link>
+          <Link className="lg:focus-visible:bg-neutral-200 lg:hover:bg-neutral-200 p-2 rounded" href="/kontakt">
+            Kontakt
+          </Link>
         </div>
 
         <button className="relative z-50 lg:hidden" onClick={onToggle}>
