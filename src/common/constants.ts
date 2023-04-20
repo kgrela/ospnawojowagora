@@ -1,5 +1,5 @@
 import { createElement } from 'react';
-import { IconBrandFacebook, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import { IconBrandFacebook, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
 
 const SOCIALS_ITEMS = [
   {

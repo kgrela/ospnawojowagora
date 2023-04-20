@@ -13,6 +13,7 @@ function App({ Component, pageProps, router }: AppProps) {
         <link rel="shortcut icon" href={Logo.src} type="image/x-icon" />
         <title>OSP Nawojowa Góra</title>
         <meta name="description" content="OSP Nawojowa Góra" />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
       <AnimatePresence initial={false} mode="wait">
         <motion.div

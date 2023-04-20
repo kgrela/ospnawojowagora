@@ -21,6 +21,7 @@ const ResizablePanel = (props: ResizablePanelProps) => {
         initial={{ height: 0 }}
         animate={{ height: props.open ? height : 0 }}
         exit={{ height: 0 }}
+        transition={{ ease: 'easeInOut', duration: 0.15 }}
         key={JSON.stringify(props.children, ignoreCircularReferences())}
         className={classNames('overflow-hidden', props.wrapperClassName)}
       >
