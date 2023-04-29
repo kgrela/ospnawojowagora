@@ -1,0 +1,1 @@
+import{a as t,o,b as n,l as s,w as c,p as a,j as _,s as r}from"./entry.7a918259.js";const i={},d={class:"container prose prose-red"},p=_("h1",null,"Ta strona nie istnieje.",-1);function l(f,u){const e=r;return o(),n("section",d,[p,s(e,{href:"/"},{default:c(()=>[a("Powrót do strony głównej")]),_:1})])}const m=t(i,[["render",l]]);export{m as default};

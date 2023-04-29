@@ -1,0 +1,1 @@
+import{a as r,o,b as t,r as s}from"./entry.7a918259.js";const c={},a={class:"container prose prose-red"};function n(e,l){return o(),t("article",a,[s(e.$slots,"default")])}const d=r(c,[["render",n]]);export{d as default};
