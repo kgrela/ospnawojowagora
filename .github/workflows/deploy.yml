@@ -22,13 +22,13 @@ jobs:
 
       - name: Build
         run: |
-          NEXT_PUBLIC_PATH=$NEXT_PUBLIC_PATH NEXT_BASE_PATH=$NEXT_BASE_PATH npm run build
+          NUXT_PUBLIC_PATH=$NUXT_PUBLIC_PATH NUXT_APP_BASE_URL=$NUXT_APP_BASE_URL npm run generate
         env:
-          NEXT_PUBLIC_PATH: ${{ format('/{0}/',  github.event.repository.name) }}
-          NEXT_BASE_PATH: ${{ format('/{0}',  github.event.repository.name) }}
+          NUXT_PUBLIC_PATH: ${{ format('/{0}/',  github.event.repository.name) }}
+          NUXT_APP_BASE_URL: ${{ format('/{0}',  github.event.repository.name) }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: out
+          folder: ./output/public
           branch: gh-pages

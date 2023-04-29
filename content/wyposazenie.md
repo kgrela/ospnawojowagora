@@ -1,0 +1,3 @@
+# Wyposażenie
+
+### SIEMA KURWA HEERE

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply antialiased bg-white;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  *[tabindex] {
+    @apply outline-none focus-visible:ring rounded-sm;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto w-full max-w-screen-xl p-4 relative;
+  }
+}

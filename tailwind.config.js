@@ -1,15 +1,23 @@
+const colors = require('tailwindcss/colors');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{ts,tsx,md,mdx}'],
+  content: [
+    './content/**/*.{ts,md,vue}',
+    './components/**/*.{ts,md,vue}',
+    './layouts/**/*.{ts,md,vue}',
+    './pages/**/*.{ts,md,vue}',
+    './lib/**/*.{ts,md,vue}',
+  ],
   theme: {
     extend: {
       colors: {
-        primary: '#DF0000',
+        primary: colors.red,
       },
       fontFamily: {
         sans: ['Oxanium'],
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('@headlessui/tailwindcss')({ prefix: 'ui' })],
+  plugins: [require('@tailwindcss/typography')],
 };
